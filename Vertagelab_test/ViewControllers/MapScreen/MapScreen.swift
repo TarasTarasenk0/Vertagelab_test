@@ -13,22 +13,18 @@ final class MapScreen: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var mapView: UIView!
-    
-    
-    //MARK: - Properties
+
     var userEmail = ""
     var placeModel: PlaceModel?
     private let hud = JGProgressHUD(style: .extraLight)
     private let viewModel = MapScreenViewModel()
     private var refreshControl: UIRefreshControl?
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         loadPlaces()
         setupTableView()
-
     }
     
     private func setupUI() {
@@ -38,11 +34,9 @@ final class MapScreen: UIViewController {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: MapCell.identifier, bundle: nil), forCellReuseIdentifier: "MapCell")
+        tableView.register(UINib(nibName: PlaceCell.identifier, bundle: nil), forCellReuseIdentifier: PlaceCell.identifier)
     }
-    
-  
-    
+ 
     private func loadPlaces() {
         hud.show(in: view)
         viewModel.getPlaces { [weak self] result in
@@ -63,7 +57,6 @@ final class MapScreen: UIViewController {
     }
     
     private func setupMap() {
-        
         let startLat = placeModel?.places[0].lat
         let startLng = placeModel?.places[0].lng
         let camera = GMSCameraPosition.camera(withLatitude: startLat ?? 50.450555, longitude: startLng ?? 30.5210808, zoom: 14.0)
@@ -74,8 +67,6 @@ final class MapScreen: UIViewController {
         for i in 0..<places.count {
             createMarker(place: places[i], mapView: mapView)
         }
-        
-        
     }
     
     private func createMarker(place: Place?, mapView: GMSMapView) {
@@ -88,4 +79,3 @@ final class MapScreen: UIViewController {
         marker.map = mapView
     }
 }
-

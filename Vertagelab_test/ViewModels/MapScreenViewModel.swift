@@ -13,7 +13,6 @@ struct MapScreenViewModel {
         NetworkService.get(endpoint: "/lat_lng.json") { result in
             switch result {
             case .success(let data):
-                data.printJSON()
                 do {
                     let places = try JSONDecoder().decode(PlaceModel.self, from: data)
                     completion(.success(places))

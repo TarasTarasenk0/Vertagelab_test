@@ -16,47 +16,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="NNW-Vt-mfP">
-                                <rect key="frame" x="40" y="238" width="334" height="136"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MPT-D5-6kJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nl6-vI-3tB" customClass="InputField" customModule="Vertagelab_test" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="60"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="NNW-Vt-mfP">
+                                        <rect key="frame" x="40" y="245.5" width="334" height="136"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nl6-vI-3tB" customClass="InputField" customModule="Vertagelab_test" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="60"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhB-KZ-mQD" customClass="InputField" customModule="Vertagelab_test" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="76" width="334" height="60"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="Tj8-ea-vG7"/>
+                                            <constraint firstAttribute="width" constant="334" id="FLj-gg-sw7"/>
+                                            <constraint firstAttribute="height" constant="136" id="ZIr-wU-Fsy"/>
                                         </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhB-KZ-mQD" customClass="InputField" customModule="Vertagelab_test" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="76" width="334" height="60"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ky-Wn-nO3">
+                                        <rect key="frame" x="157" y="462.5" width="100" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="9Dl-iw-fnW"/>
+                                            <constraint firstAttribute="height" constant="40" id="HlA-UD-pBu"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="gs0-1F-Od4"/>
                                         </constraints>
-                                    </view>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S4S-nU-y4r"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ky-Wn-nO3">
-                                <rect key="frame" x="157" y="414" width="100" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="bhv-wh-zkN"/>
-                                    <constraint firstAttribute="width" constant="100" id="qc6-to-zHd"/>
+                                    <constraint firstItem="NNW-Vt-mfP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MPT-D5-6kJ" secondAttribute="leading" constant="16" id="6ZM-Mb-UNv"/>
+                                    <constraint firstItem="NNW-Vt-mfP" firstAttribute="centerY" secondItem="MPT-D5-6kJ" secondAttribute="centerY" multiplier="0.7" id="7yX-TK-k6L"/>
+                                    <constraint firstItem="NNW-Vt-mfP" firstAttribute="centerX" secondItem="MPT-D5-6kJ" secondAttribute="centerX" id="FoH-qE-9aZ"/>
+                                    <constraint firstItem="9Ky-Wn-nO3" firstAttribute="top" secondItem="NNW-Vt-mfP" secondAttribute="bottom" constant="81" id="M72-dr-PPs"/>
+                                    <constraint firstItem="9Ky-Wn-nO3" firstAttribute="centerX" secondItem="MPT-D5-6kJ" secondAttribute="centerX" id="iqE-SX-h3A"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NNW-Vt-mfP" secondAttribute="trailing" constant="16" id="mvT-7A-UIG"/>
                                 </constraints>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" systemColor="labelColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S4S-nU-y4r"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="9Ky-Wn-nO3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Uf-f8-zIz"/>
-                            <constraint firstItem="NNW-Vt-mfP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="9L7-vq-Gwy"/>
-                            <constraint firstItem="9Ky-Wn-nO3" firstAttribute="top" secondItem="NNW-Vt-mfP" secondAttribute="bottom" constant="40" id="Slb-zX-6pg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NNW-Vt-mfP" secondAttribute="trailing" constant="40" id="YlE-Jm-Rix"/>
-                            <constraint firstItem="NNW-Vt-mfP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="arG-Z2-Lhq"/>
+                            <constraint firstItem="MPT-D5-6kJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DXT-Ep-6rC"/>
+                            <constraint firstItem="MPT-D5-6kJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="F9U-X5-4YV"/>
+                            <constraint firstItem="MPT-D5-6kJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="O7H-av-pXV"/>
+                            <constraint firstAttribute="bottom" secondItem="MPT-D5-6kJ" secondAttribute="bottom" id="Peh-Kl-gzM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FnD-PE-5Ey"/>
@@ -92,6 +103,9 @@
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

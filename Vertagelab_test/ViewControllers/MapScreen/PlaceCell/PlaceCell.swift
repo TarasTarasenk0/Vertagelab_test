@@ -7,15 +7,10 @@
 
 import UIKit
 
-final class MapCell: UITableViewCell {
+final class PlaceCell: UITableViewCell {
     
-    //MARK: - IBOutlets
     @IBOutlet private weak var placeTitle: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
     override func prepareForReuse() {
         super.prepareForReuse()
         placeTitle.text = ""
@@ -27,5 +22,4 @@ final class MapCell: UITableViewCell {
         placeTitle.text = "\(placeId).\(placeName)"
         
     }
-    
 }

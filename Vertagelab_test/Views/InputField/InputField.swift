@@ -12,8 +12,7 @@ final class InputField: UIView {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
-    
-    
+ 
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -27,11 +26,10 @@ final class InputField: UIView {
     private func setupUI() {
         xibSetup()
         textField.delegate = self
-        
-        self.layer.borderWidth = 2
-        self.layer.borderColor = UIColor.black.cgColor
-        self.layer.cornerRadius = self.bounds.size.width / 20
-        self.clipsToBounds = true
+        layer.borderWidth = 2
+        layer.borderColor = UIColor.black.cgColor
+        layer.cornerRadius = self.bounds.size.width / 20
+        clipsToBounds = true
     }
 }
 

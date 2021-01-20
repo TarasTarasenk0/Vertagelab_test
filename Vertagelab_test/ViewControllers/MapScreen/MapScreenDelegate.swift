@@ -8,7 +8,6 @@
 import UIKit
 
 extension MapScreen: UITableViewDelegate {
-    
 }
 
 extension MapScreen: UITableViewDataSource {
@@ -17,11 +16,9 @@ extension MapScreen: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: MapCell.identifier, for: indexPath) as! MapCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: PlaceCell.identifier, for: indexPath) as! PlaceCell
         let cellData = placeModel?.places[indexPath.item]
         cell.configure(cellData)
         return cell
     }
-    
-    
 }

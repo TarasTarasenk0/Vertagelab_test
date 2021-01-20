@@ -23,12 +23,10 @@ final class WelcomeViewController: UIViewController {
         emailTextField.textField.placeholder("Enter email")
         passwordTextField.textField.applyPasswordStyle()
         passwordTextField.textField.placeholder("Enter password")
-
         loginButton.layer.borderWidth = 2
         loginButton.layer.borderColor = UIColor.black.cgColor
         loginButton.layer.cornerRadius = loginButton.bounds.size.width / 12
         loginButton.clipsToBounds = true
-
     }
     
     @IBAction private func login(_ sender: UIButton) {
@@ -43,4 +41,3 @@ final class WelcomeViewController: UIViewController {
         navigationController?.pushViewController(mapScreen, animated: true)
     }
 }
-
