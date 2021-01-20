@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InputField" customModule="Vertagelab_test" customModuleProvider="target">
+            <connections>
+                <outlet property="errorLabel" destination="8zT-at-cxF" id="SKJ-l6-WmQ"/>
+                <outlet property="textField" destination="36H-zI-qm1" id="rgT-Ni-Yxz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="67"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label hidden="YES" opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter a valid value." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zT-at-cxF">
+                    <rect key="frame" x="16" y="45" width="382" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="TUB-Bm-u0X"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.82745098039999998" green="0.13725490200000001" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="36H-zI-qm1">
+                    <rect key="frame" x="16" y="0.0" width="382" height="67"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.91681827910958902" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="36H-zI-qm1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Aoo-ca-o53"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="8zT-at-cxF" secondAttribute="bottom" constant="8" id="V14-rt-mR6"/>
+                <constraint firstItem="36H-zI-qm1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="irK-Rx-DuU"/>
+                <constraint firstAttribute="bottom" secondItem="36H-zI-qm1" secondAttribute="bottom" id="qJs-lZ-zSJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="36H-zI-qm1" secondAttribute="trailing" constant="16" id="rsT-D1-dwh"/>
+                <constraint firstItem="8zT-at-cxF" firstAttribute="leading" secondItem="36H-zI-qm1" secondAttribute="leading" id="wNN-0q-xTN"/>
+                <constraint firstItem="8zT-at-cxF" firstAttribute="trailing" secondItem="36H-zI-qm1" secondAttribute="trailing" id="y43-E6-mYI"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <integer key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="131.8840579710145" y="171.76339285714286"/>
+        </view>
+    </objects>
+</document>
